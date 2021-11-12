@@ -1,0 +1,307 @@
+
+/* Body */
+body{
+    color: #000000;
+    margin-top: 72px;
+    font-family: 'PT Sans', sans-serif;
+    background-color: #ff94c2;
+}
+
+/* Selection */
+::selection {
+    background: #ffffa8; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #ffffa8; /* Gecko Browsers */
+}
+
+/* Cursor */
+.unicorn-cursor {
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='100' height='120' viewport='0 0 100 100' style='fill:black;font-size:60px;'><text y='50%'>🦄</text></svg>") 16 0,auto; /*!emojicursor.app*/
+}
+
+/* Font Styles */
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 5rem;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 3rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+li {
+    font-size: 1.2rem;
+    
+}
+
+/* Project Subtitle */
+.project-subtitle {
+    font-size: 2rem;
+    color: #757575;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+/* Nav */
+nav {
+    background-color: #fafafa;
+}
+
+/* Project card */
+
+.project-title{
+    color: #000000;
+    margin:0 0 10px 0;
+}
+
+.project-description{
+    color: #000000;
+}
+
+.special-text {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.card-img-top{
+    height: 350px;
+    width: 100%; 
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+
+}
+
+.project-title:hover {
+    text-decoration: underline 4px #ba2d65;
+}
+
+.card-img-top:hover{
+    transition: 250ms linear;
+    outline: #ba2d65 6px solid;   
+}
+
+.requires-password {
+   margin:0; 
+   color: #000000;
+   font-size: 1rem;
+   margin-bottom: 10px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #f06292;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color: #ba2d65;
+}
+
+/* Buttons */
+.btn{
+    background-color: #f06292;
+    border:none;
+}
+
+.btn:hover {
+    background-color: #ba2d65;
+    border: none;
+   
+}
+
+.btn:focus {
+    background-color: #ba2d65;
+    border:none;
+    box-shadow: none;
+}
+
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+/* hero */
+.hero {
+    background-color: #fafafa; 
+}
+
+/* Tabs */
+.nav-tabs {
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    background-color: #ff94c2;
+    color: #000000;
+    border: none;
+    border-radius: 0;
+    font-size: 1.25rem;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+    text-decoration: underline 3px #ba2d65;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border: none;
+    color: #000000;
+    background-color: #ff94c2;
+    text-decoration: underline 3px #ba2d65; 
+}
+
+/* Projects */
+/* Project cover */
+.cover-img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Project Body Start */
+.project-start{
+    background-color: #fafafa;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+/* Project Outline */
+.outline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+}
+
+.outline li{
+    list-style-type: none;
+    padding: 8px 0px;
+}
+
+
+/* Notification banner */
+.alert-primary{
+    background-color: #ff94c2;
+    border: none;
+}
+
+/* Project Images */
+.bgfill {
+    background-color: #000000;
+    border-radius: 10px;
+    margin-top: 3rem;
+
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+}
+
+.zoom {
+    cursor: zoom-in;
+}
+
+.next-project-title {
+    margin:10px 0;
+}
+
+/* Footer */
+.quote{
+    color: #ffffff;
+    margin: 0;
+}
+
+footer {
+    background-color: #000000;
+    min-height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    bottom: -50px;
+     
+}
+
+/* Form */
+.form-control {
+    height: 46px;
+    border: 1px solid #f06292;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #ba2d65;
+}
+
+/* Results bar graph */
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for results bars */
+.container-results {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* white background */
+}
+
+.tasks {
+  text-align: right; /* Right-align text */
+  padding-top: 8px; /* Add top padding */
+  padding-bottom: 8px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.target-ds {width: 58%; background-color: #4db6ac;} 
+.target-is {width: 63%; background-color: #00867d;} 
+.walmart-ds {width: 47%; background-color: #4db6ac;}
+.walmart-is {width: 58%; background-color: #00867d;} 
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .nav-tabs .nav-link{
+        width: 100%;
+        text-align: left;
+    }
+
+    li.nav-item{
+        width: 100%;
+    }   
+
+    .card-img-top{
+        height: 250px;
+    }
+
+    .cover-img {
+        height: 250px;
+    }
+}
+
+
+
+
