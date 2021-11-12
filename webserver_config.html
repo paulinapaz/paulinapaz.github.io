@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webserver Config xCP</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="project-start">
+    <!-- Navigation Top -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <div class="logo">
+                <a href="/index.html">
+                    <p class="m-0">Paulina Paz</p>
+                    <p class="m-0">UX & Product Designer</p>
+                </a>
+            </div>
+    
+            <div class="d-flex">
+                <!-- Phone -->
+                <a href="tel:+27710476880">
+                    <div class="m-2 d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-phone-fill" viewbox="0 0 16 16">
+                            <path
+                                d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z" />
+                        </svg>
+                        <p class="ms-2 mb-0 d-none d-lg-flex">+27 0710476880</p>
+                    </div>
+                </a>
+    
+                <!-- Email -->
+                <a href="mailto:paulipaza@gmail.com">
+                    <div class="m-2 d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-envelope-fill" viewbox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                        </svg>
+                        <p class="ms-2 mb-0 d-none d-lg-flex">paulipaza@gmail.com</p>
+                    </div>
+                </a>
+    
+                <!-- Linkedin -->
+                <a href="https://www.linkedin.com/in/paulina-paz-arce/" target="_blank">
+                    <div class="m-2 d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-linkedin" viewbox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                        <p class="ms-2 mb-0 d-none d-lg-flex">/in/paulina-paz-arce/</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row mt-5 mb-5">
+
+            <!-- Outline -->
+            <div class="col-lg-4 text-end">
+                <div class="d-none d-lg-block mb-5">
+                    <ul class="outline">
+                        <li>
+                            <a href="#url-redirects"> URL Redirects</a>
+                        </li>
+                        <li>
+                            <a href="#index-manager">Index Manager</a>
+                        </li>
+                        <li>
+                            <a href="#custom-error-pages">Custom Error Pages</a>
+                        </li>
+                        <li>
+                            <a href="#ip-blocker">IP Blocker</a>
+                        </li>
+                        <li>
+                            <a href="#protect-directory">Protect Directory</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="col-lg-8">
+                <img src="/images/webserverconfig/url-redirects/cover.gif" alt="" class="cover-img unicorn-cursor mb-5">
+
+                <h1>Webserver Config Tools</h1>
+
+                <h2 class="project-subtitle">The re-design of 5 webserver config tools with a new and improved user experience.</h2>
+
+                <h2>Overview </h2>
+                
+                <p>The company's strategic business objective is to 'sunset KonsoleH'. KonsoleH is the company's old control panel which is being be replaced by the new xneelo Control Panel (xCP). The goal of this project was to re-design, with a new and improved user experience, 5 webserver config tools that are available in KonsoleH.</p>
+
+
+
+
+
+
+                <!-- URL Redirects -->
+                <h2 id="url-redirects">URL Redirects </h2>
+
+                <!-- Summary -->
+                <h3>What this tool does</h3>
+
+                <p>This tool allows you to redirect your entire website or a specific web page to a different URL than the one originally requested. For example, if you've changed your business name and are migrating to a new domain, you can create a permanent redirect from your old website ro the new website URL. Another example is you might want to conduct A/B testing so you want to temporarily redirect visitors to another webpage.</p>
+
+                <!-- Features -->
+                <h3>Features for MVP </h3>
+
+                <p>As part of MVP, the business determined that all functionality that is available in KonsoleH (the old control panel) has to be available for the new xneelo Control Panel, in order to sunset KonsoleH (SBO). Such functionality includes:</p>
+
+                <ul>
+                    <li>Add a redirect (301 Permanent, 302 Temporary, 401 Gone and 303 See Other).</li>
+                    <li>Edit a redirect.</li>
+                    <li>Delete a redirect.</li>
+                </ul>
+
+                <!-- Pain Points -->
+                <h3>Customer Pain Points in KonsoleH</h3>
+
+                <p>I conducted interviews with 5 consultants from xneelo technical support and asked them what the customer pain points were when using this tool. This is what I found:</p>
+                <ul>
+                    <li>Customers get the URL syntax (http://) wrong of the redirection.</li>
+                        <ul>
+                            <li>We solved this issue in the new design by adding a select component where the user can select the URL protocol before typing the URL path.</li>
+                        </ul>
+
+                    <li>Customers get the file path wrong. They are not sure whether or not they have to add a forward slash /.</li>
+                        <ul>
+                            <li>We solved this issue by implementing proper validation and adding adequate helper text below the text input.</li>
+                        </ul>
+
+                    <li>Customers do not understand that the / represents the root folder.</li>
+                        <ul>
+                            <li>We solved this issue by adding radio buttons so that the user can select 'Entire website' instead of typing a forward slash (/).</li>
+                        </ul>
+
+                    <li>Redirects don’t work on multiple domains that have a parent domain with redirects in the code. The support consultants have to exclude the multiple domains manually.</li>
+                        <ul>
+                            <li>We were not able to solve this issue for MVP but our team will be looking at this post MVP. For MVP we added a notification banner, explaining this to the user.</li>
+                        </ul>
+                </ul>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/kh.png" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/kh.png" class="img" alt="URL Redirects KonsoleH">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">This is what the current tool looks like in KonsoleH </div>
+                </div>
+
+                <!-- Design -->
+                <h3>The Redesign for xCP</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/table.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/table.jpg" class="img" alt="URL Redirects xneelo Control Panel">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> I added a notification banner explaining redirects don’t work on multiple domains that have a parent domain with redirects in the code. The user can dismiss this banner at any point. </div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/hintcard.jpg" target="_blank" class="zoom"><img src="/images/webserverconfig/url-redirects/hintcard.jpg" class="img" alt="About URL Redirects">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">I added an expandable card above the table explaining what this tool does and which types of redirects the user can create. Clicking on the close icon button collapses the card.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/table-actions.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/table-actions.jpg" class="img" alt="URL Redirects table actions">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">The table displays all of the redirects that the user has created for this domain. The user can add, edit or delete redirects they have created. </div>
+                </div>
+
+                <!-- Add Redirects Design -->
+                <h3>Add Redirect Feature</h3>
+                
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="images/webserverconfig/url-redirects/add-redirect-entire-website.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/add-redirect-entire-website.jpg" class="img" alt="Add redirect on website">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">When the user clicks on the Add button, this full page modal is displayed. The user can choose which type of redirect they want to create, if they want to redirect their entire website or a specific directory and which URL they want to redirect to.</div>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">In KonsoleH, the user would have to type "/" if they wanted to redirect their entire website. Now, the user can select the "Entire website" radio button instead.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/add-redirect-website-directory.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/add-redirect-website-directory.jpg" class="img" alt="Add redirect on web page">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">The user can choose to redirect a specific website directory, subdirectory or file by selecting that radio button option.</div>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">The helper text specifies the user must enter the path they want to redirect from, starting with a forward slash. The placeholder text shows an example of what the path could look like.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/website-redirect-validation.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/website-redirect-validation.jpg" class="img" alt="Website redirect already exists">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">After the user clicks Add, we are able to do a back-end check and if the website already has a redirect, in that case we display this error toast.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/directory-validation.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/directory-validation.jpg" class="img" alt="Website directory validation">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">After the user clicks Add, we are able to do a back-end check and if the specified path already has a redirect, in that case we display this inline error validation. The Add button will remain in disabled state until the form passes all front-end validation. </div>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">In order to solve one of the customer pain points, I included the URL protocol as a dropdown and made the most common protocol (https://) the default option. </div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/guard-modal.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/guard-modal.jpg" class="img" alt="Discard changes modal">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">If the user fills out the form, but accidentally clicks on 'Cancel' or closes the modal, then we prompt them with this modal. This is to ensure that the user is okay with discarding their changes, as they will not be saved.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/add-redirect-success.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/add-redirect-success.jpg" class="img" alt="Add redirect success toast">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">This Success toast is disaplayed in the parent page after the user adds a redirect. </div>
+                </div>
+
+                <h3>Edit Redirect Feature</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/edit-redirect.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/edit-redirect.jpg" class="img" alt="Edit redirect">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">If the user want to edit their redirect, after they click on 'Edit' (next to the redirect they want to edit), a full page modal opens displaying the saved form. The user can then make the necessary changes and click Save. </div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/edit-redirect-success.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/edit-redirect-success.jpg" class="img" alt="Edit redirect success toast">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">After saving the form, the user will see a success toast in the parent page, saying that their changes were saved.</div>
+                </div>
+
+                <h3>Delete Redirect Feature</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/delete-redirect-modal.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/delete-redirect-modal.jpg" class="img" alt="Delete redirect modal">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">If the user wants to delete a redirect, they are prompted with this confirmation modal.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/url-redirects/delete-redirect-success.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/url-redirects/delete-redirect-success.jpg" class="img" alt="Delete redirect success toast">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">After deleting the redirect, a success toast is displayed in the parent page.</div>
+                </div>
+                
+                <h3>The Prototype</h3>
+
+                <!-- Video -->
+                <div class="bgfill">
+                    <video controls src="/images/webserverconfig/url-redirects/prototype.mp4" class="img"></video>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">This prototype was done in Figma and recorded with Screencast-O-Matic.</div>
+                </div>
+
+
+
+
+
+
+                <!-- Index Manager -->
+                <h2 id="index-manager">Index Manager </h2>
+
+                <h3>What this tool does</h3>
+
+                <p>When someone visits your website directory, the web server looks for specific index files in a specific order in order to display a web page on your browser. This tool allows you to customise these index files and the order in which the web server looks for them. If no file is found and directory browsing is disabled, a 403 Forbidden error is displayed. If no file is found and directory browsing is enabled, then your browser will display a list your website folders and files through hypertext links.</p>
+
+                <h3>Features for MVP</h3>
+
+                <p>As part of MVP, the business determined that all functionality that is available in KonsoleH (the old control panel) has to be available for the new xneelo Control Panel, in order to sunset KonsoleH. Such functionality includes:</p>
+
+                <ul>
+                    <li>Edit index files.</li>
+                    <li>Enable directory browsing.</li>
+                    <li>Disable directory browsing.</li>
+                </ul>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/kh.png" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/kh.png" class="img" alt="Index Manager tool in KonsoleH">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">This is what the current tool looks like in KonsoleH.</div>
+                </div>
+
+                <h3>The Redesign for xCP</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/default-index.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/default-index.jpg" class="img" alt="Index Manager tool in xCP">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">The user can clearly see they are in the Index Manager tool through the red and underlined tab in the page header. The two main functionalities of the tool (edit index pages and enable/ disable directory browsing) are separated by the two cards. </div>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">If the user has not customised their index files, then the tool will display the default files that the webserver looks for (see below Index files in the top card). Directory browsing is off by default, since it's not recommended to display your website files and folders.</div>
+                </div>
+
+                <h3>Edit Index Files</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/customise-index-userflow.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/customise-index-userflow.jpg" class="img" alt="Index Manager user flows">
+                    </a>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/edit-index3.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/edit-index3.jpg" class="img" alt="Edit index files - default option">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">If the user has not changed the webserver's default index files, then when they click Edit and this full page modal opens, they will see the Default index files radio button pre-selected. </div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/edit-index.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/edit-index.jpg" class="img" alt="Edit index files">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">If the user wants to choose which files the webserver should look for, then they can select that radio button option.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/edit-index2.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/edit-index2.jpg" class="img" alt="Edit index files - file input">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">When the user selects Change default index files, then a chip input will appear. The user can type one or multiple file names. The webserver will look for the first file and if it does not exist, then the webserver will look for the second file, and so on until a web page is displayed.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/edit-index-success.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/edit-index-success.jpg" class="img" alt="">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">After saving the form, the user will see a success toast in the parent page, saying that their changes were saved.</div>
+                </div>
+
+
+                <h3>Enable Directory Browsing</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/enable-db-userflow.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/enable-db-userflow.jpg" alt="Enable directory browsing user flow" class="img">
+                    </a>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/enable-directory-browsing.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/enable-directory-browsing.jpg" alt="Disable directory browsing modal" class="img">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">The user can click on the on/ off toggle to enable and disable diirectory browsing. If the toggle is off and the user clicks on it, then they get prompted with the enable directory confirmation modal. The modal explains the consequences of enabling directory browsing.</div>
+                </div>
+
+                  <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/enable-directory-browsing-success.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/enable-directory-browsing-success.jpg" alt="Disable directory browsing success toast" class="img">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">After confirming their action, by clicking on the Enable button, the modal closes and a success toast is displayed.</div>
+                </div>
+
+                <h3>Disable Directory Browsing</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/disable-db-userflow.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/disable-db-userflow.jpg" alt="Disable directory browsing modal" class="img">
+                    </a>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/disable-directory-browsing.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/disable-directory-browsing.jpg" alt="Disable directory browsing modal" class="img">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">If the toggle is on and the user clicks on it, then they get prompted with the disable directory confirmation modal. The modal explains the consequences of disabling directory browsing.</div>
+                </div>
+
+                  <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/index-manager/disable-directory-browsing-success.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/index-manager/disable-directory-browsing-success.jpg" alt="Disable directory browsing success toast" class="img">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">After confirming their action, by clicking on the Disable button, the modal closes and a success toast is displayed.</div>
+                </div>
+
+                <h3>The Prototype</h3>
+
+                <!-- Video -->
+                <div class="bgfill">
+                    <video controls src="/images/webserverconfig/index-manager/prototype.mp4" class="img"></video>
+                </div>
+
+
+
+
+
+
+                <!-- Custom Error Pages -->
+                <h2 id="custom-error-pages">Custom Error Pages </h2>
+
+                <h3>What this tool does</h3>
+
+                <p>This tool allows users to personalise their website's error pages rather than using the server's default error pages, making their website look more professional and helpful to browsers.</p>
+
+                <h3>Features for MVP</h3>
+
+                <p>As part of MVP, the business determined that all functionality that is available in KonsoleH (the old control panel) has to be available for the new xneelo Control Panel, in order to sunset KonsoleH. Such functionality includes:</p>
+
+                <ul>
+                    <li>Edit 4 types of error pages by specifying a file location or URL.</li>
+                    <li>Revert back to the webserver's error page.</li>
+                </ul>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/custom-error-pages/kh.png" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/custom-error-pages/kh.png" class="img" alt="Custom error pages tool in KonsoleH">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert">
+                    <div class="special-text">This is what the current tool looks like in KonsoleH </div>
+                </div>
+                
+                <!-- Design -->
+                <h3>The Redesign for xCP</h3>
+                
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/custom-error-pages/table.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/custom-error-pages/table.jpg" class="img" alt="Custom error pages table in xCP">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert">
+                    <div class="special-text"> The user will see a table with four types of error pages: 401 Unauthorised, 403 Forbidden, 404 Not Found, 500 Internal Server Error. If the user has customised any of these error pages, then the table will display the File Location or URL of the error page.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/custom-error-pages/hint-card.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/custom-error-pages/hint-card.jpg" class="img" alt="About Custom Error Pages">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert">
+                    <div class="special-text"> I added an expandable card above the table explaining what this tool does and which error pages they can customise. The user can also collapse the card by clicking on the close icon.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/custom-error-pages/actions.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/custom-error-pages/actions.jpg" class="img" alt="Custom Error Pages edit action">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert">
+                    <div class="special-text"> The user can click on the kebab next to the error page they want to customise. The kebab will display an Edit option.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/custom-error-pages/edit-default.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/custom-error-pages/edit-default.jpg" class="img" alt="Edit error page - default option">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert">
+                    <div class="special-text">After the user clicks on Edit, they will be prompted with a full page modal. The modal will display the type of error page they are about to customise (in this case 401 Unauthorised). If the user has not customised this error page before, the Default option will be selected by default, since the website is displaying the webserver's default error page.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/custom-error-pages/edit-file.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/custom-error-pages/edit-file.jpg" class="img" alt="Edit error page -  file option">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert">
+                    <div class="special-text"> If the user wants to customise their error page, they can do so by specifying a file location or URL. If they've selected the File radio option, then a text input will appear where they can type the exact file location of the webpage they want to display for this type of error.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/custom-error-pages/edit-url.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/custom-error-pages/edit-url.jpg" class="img" alt="Edit error page - URL option">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert">
+                    <div class="special-text"> If the user wants to customise their error page, they can do so by specifying a file location or URL. If they've selected the URL radio option, then a text input will appear where they can select the URL protocol and type the URL path of the webpage they want to display for this type of error.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/custom-error-pages/guard-modal.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/custom-error-pages/guard-modal.jpg" class="img" alt="Discard changes modal">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert">
+                    <div class="special-text"> If the user edits the form, but accidentally clicks on Cancel or closes the modal, then we prompt them with this modal. This is to ensure that the user is okay with discarding their changes, as they will not be saved.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/custom-error-pages/success-toast.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/custom-error-pages/success-toast.jpg" class="img" alt="Edit custom error page success toast">
+                    </a>
+                </div>
+                
+                <div class="alert alert-primary mt-3" role="alert">
+                    <div class="special-text">After confirming their action, by clicking on the Save button, the modal closes and a success toast is displayed.</div>
+                </div>
+
+                <h3>The Prototype</h3>
+
+                <!-- Video -->
+                <div class="bgfill">
+                    <video controls src="/images/webserverconfig/custom-error-pages/prototype.mp4" class="img"></video>
+                </div>
+
+
+
+
+
+
+
+                <!-- IP Blocker -->
+                <h2 id="ip-blocker">IP Blocker </h2>
+
+                <!-- Summary -->
+                <h3>What this tool does</h3>
+
+                <p>This tool blocks IP addresses from accessing the user's website and displaying a 403 error message. This is useful when blocking bots or spammers.</p>
+
+                <!-- Features -->
+                <h3>Features for MVP </h3>
+
+                <p>As part of MVP, the business determined that all functionality that is available in KonsoleH (the old control panel) has to be available for the new xneelo Control Panel, in order to sunset KonsoleH. Such functionality includes:</p>
+
+                <ul>
+                    <li>Block a single IP or IP range.</li>
+                    <li>Block a domain.</li>
+                    <li>Delete to unblock IP's.</li>
+                </ul>
+
+                <p>When conducting user testing, these were the features that were requested by users:</p>
+
+                <ul>
+                    <li>Block by country.</li>
+                    <li>Block IPs for an entire server instead of per domain.</li>
+                    <li>Import list of IP's to block multiple at a time.</li>
+                </ul>
+
+                <p>These features will be implemented post MVP.</p>
+
+                <!-- Pain Points -->
+                <h3>Customer Pain Points in KonsoleH</h3>
+
+                <p>I conducted interviews with 5 consultants from xneelo technical support and asked them what the customer pain points were when using this tool. This is what I found:</p>
+                <ul>
+                    <li>Customers cannot import a list of IPs, they can only add one at a time. </li>
+                    <li>Dedicated Server customers want the ability to block an IP address across an entire dedicated server</li>
+                    <li>People don’t know which formats they can use to specify blocked IPs</li>
+                </ul>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/kh.png" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/kh.png" class="img" alt="IP Blocker KonsoleH">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">This is what the current tool looks like in KonsoleH </div>
+                </div>
+
+                <!-- Design -->
+                <h3>The Redesign for xCP</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/user-flows.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/user-flows.jpg" class="img" alt="IP Blocker user flows">
+                    </a>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/table.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/table.jpg" class="img" alt="IP Blocker in xCP">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> When the user goes to the IP blocker tool, they will see a list of all the blocked IP's for their website.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/hint-card.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/hint-card.jpg" class="img" alt="About the IP Blocker tool">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> I added an expandable card above the table explaining what this tool does. The user can also collapse the card by clicking on the close icon.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/table-actions.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/table-actions.jpg" class="img" alt="Delete blocked IP action">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> The user is able to delete blocked IPs at any point. The can delete a single row by clicking on the row kebab and then on the Delete option.</div>
+                </div>
+
+                <h3>Delete IPs</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/row-delete.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/row-delete.jpg" class="img" alt="Row delete blocked IP">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> Since deleting a blocked IP doesn't have serious consequences, we don't prompt the user with a confirmation modal. They will see that the corresponding row is being deleted through the spinner.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/row-delete-with-selection.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/row-delete-with-selection.jpg" class="img" alt="Row delete with selection">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> If the user selects one or more rows but they click on the row kebab to delete a blocked IP, then only that row will be deleted. The remaining rows (that were selected but not deleted) will remain selected.</div>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> If the user wants to bulk delete, then they would have to click Delete on the table header, in order for all the selected rows to be deleted.</div>
+                </div>
+
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/bulk-delete.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/bulk-delete.jpg" class="img" alt="Bulk delete blocked IPS">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> In this example, the user has performed a bulk delete action (by clicking Delete on the table header). You can see the Delete button in the table header has changed to a spinner and all the rows that are being deleted also display a spinner. </div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/bulk-delete-success.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/bulk-delete-success.jpg" class="img" alt="URL Redirects xneelo Control Panel">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> After all rows have been deleted, then the table updates accordingly and a Success toast is displayed.</div>
+                </div>
+
+                <h3>Add IP</h3>
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/add-ip.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/add-ip.jpg" class="img" alt="Add IP blocker">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> The user can block as many IP addresses from accessing their website. They can do that by clicking on the Add button in the IP blocker table. This will open up this full page modal.</div>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> In KonsoleH (the old control panel), users are not aware of which formats they can enter, when blocking an IP or IP range. In the new design, you can see I included all the valid formats and examples that the user can enter.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/add-domain.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/add-domain.jpg" class="img" alt="Add IP blocker URL">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> The user can also enter a URL and the tool will convert it into an IP address.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/ip-blocker/add-ip-success.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/ip-blocker/add-ip-success.jpg" class="img" alt="Add IP Blocker success toast">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> After the user enters the IP, IP range or URL that they want to block and click Add, it gets added to the table and a success toast is displayed.</div>
+                </div>
+
+                <h3>The Prototype</h3>
+
+                <!-- Video -->
+                <div class="bgfill">
+                    <video controls src="/images/webserverconfig/ip-blocker/prototype.mp4" class="img"></video>
+                </div>
+
+
+
+
+
+
+
+
+                <!-- Protect Directory -->
+                <h2 id="protect-directory">Protect Directory </h2>
+
+                <!-- Summary -->
+                <h3>What this tool does</h3>
+
+                <p>The Protect Directory tool is used to restrict access to specified directories on your domain thereby allowing you to grant privileged access to multiple users, each having their own login details e.g. username and password. When a visitor browses to a protected directory, they will be prompted to provide a username and password. Only if the correct username and password combination is provided, will the webpage load.</p>
+
+                <!-- Features -->
+                <h3>Features for MVP </h3>
+
+                <p>As part of MVP, the business determined that all functionality that is available in KonsoleH (the old control panel) has to be available for the new xneelo Control Panel, in order to sunset KonsoleH. Such functionality includes:</p>
+
+                <ul>
+                    <li>Add authorised users.</li>
+                    <li>Delete authorised users.</li>
+                    <li>Reset password for authorised users.</li>
+                </ul>
+
+                <!-- Pain Points -->
+                <h3>Customer Pain Points in KonsoleH</h3>
+
+                <p>I conducted interviews with 5 consultants from xneelo technical support and asked them what the customer pain points were when using this tool. This is what I found:</p>
+                <ul>
+                    <li>Customers don’t know what the symbols or icons represent.</li>
+                    <li>Customers cannot protect their whole website directory at once, only sub-folders. So a lot of manual intervention needed for this request.</li>
+                </ul>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/kh.png" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/kh.png" class="img" alt="Protect Directory KonsoleH">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text">This is what the current tool looks like in KonsoleH </div>
+                </div>
+
+                <!-- Design -->
+                <h3>The Redesign for xCP</h3>
+                <p>This tool only got to the wireframe stages since there was a business decision to make it part of the File Manager tool instead.</p>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/table-level1.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/table-level1.jpg" class="img" alt="Protect Directory table - level 1">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> When accessing this tool, the user will see a table with their website's directory. They will be able to navigate through their website's files and folders by clickin the the folder name. </div>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> At any point, they will also see if each folder or file is password protected or not. They can also click on Manager Users if they want to view their authorised users for that specific folder or file.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/table-level2.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/table-level2.jpg" class="img" alt="Protect Directory table - level 2">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> In this example, the user has selected their public_html, and they are viewing all the folders inside public_html. They are able to go back to their home directory by clicking on the breadbrumb navigation. </div>
+                </div>
+
+                 <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/users.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/users.jpg" class="img" alt="Protect directory manage users table">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> In this example, the user is clicked on the Manage users button for folder_one inside public_html. This will take the user to another screen where they will be able to see a list of all the authorised users for folder_one.</div>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> From here, the user can add additional authorised users, delete authorised users, reset their password and protect / unprotect this directory.</div>
+                </div>
+
+                <h3>Add Authorised User</h3>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/add-auth-user.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/add-auth-user.jpg" class="img" alt="Add authorised user">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> The user can add as many authorised users. They can do that by clicking on the Add button in the manage users table. This will open up this full page modal, where they would have to enter a username and a password. The authorised user would need to enter the same info when trying to access this  </div>
+                </div>
+
+                <h3>Reset Password</h3>
+
+                 <!-- Image -->
+                 <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/users.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/users.jpg" class="img" alt="Protect directory manage users table">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> The user can reset password for all authorised users that they have created. They can do that by clicking on Reset password next to the corresponding authorised user.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/reset-password.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/reset-password.jpg" class="img" alt="Reset password for authorised user">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> Clicking on Reset password will open up this full page modal, where the user would enter a new password and click Reset. This would reset the password, close the modal and display a Success toast.</div>
+                </div>
+
+                <h3>Delete Authorised User</h3>
+
+                 <!-- Image -->
+                 <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/users.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/users.jpg" class="img" alt="Protect directory manage users table">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> The user can delete any authorised users that they have created. They can do that by clicking on the Delete button next to the corresponding authorised user.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/delete-user-modal.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/delete-user-modal.jpg" class="img" alt="Delete authorised user modal">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> Clicking on Delete will open up this confirmation modal, stating that this user will no longer have access to this part of their website. If the user confirms this action by clicking on the Delete button, this would remove access to the no lonfer authorised user, close the modal and display a Success toast.</div>
+                </div>
+
+                <h3>Protect Website Directory</h3>
+
+                 <!-- Image -->
+                 <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/users.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/users.jpg" class="img" alt="Protect directory toggle">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> The user can password protect and remove the password protection for their website or webpqge at any point. They can do that by clickin on the On and Off toggle next to 'Password protect this directory'. </div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/protect-modal.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/protect-modal.jpg" class="img" alt="Protect directory modal">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> If the toggle is Off and the user clicks on it in order to password protect this directory, they will get prompted with this confirmation modal.</div>
+                </div>
+
+                <!-- Image -->
+                <div class="bgfill">
+                    <a href="/images/webserverconfig/protect-directory/unprotect-modal.jpg" target="_blank" class="zoom">
+                        <img src="/images/webserverconfig/protect-directory/unprotect-modal.jpg" class="img" alt="Unprotect directory modal">
+                    </a>
+                </div>
+
+                <div class="alert alert-primary mt-3" role="alert"> 
+                    <div class="special-text"> If the toggle is On and the user clicks on it in order to remove password protection for this directory, they will get prompted with this confirmation modal.</div>
+                </div>
+               
+
+
+
+                 <!-- Next and Previous Project -->
+                <div class="row mt-5">
+                
+                    <div class="col-6">
+                        <a href="/target_walmart_case_study.html">Previous Project</a>
+                        <h3 class="next-project-title">Target vs. Walmart Navigation</h3>
+                    </div>
+                
+                    <div class="col-6 text-end">
+                        <a href="/table.html" target="_blank">Next Project</a>
+                        <h3 class="next-project-title">Table 2.0</h3>
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
